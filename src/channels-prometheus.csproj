@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Faactory.Channels.Prometheus</PackageId>
-    <Version>0.7.1</Version>
+    <Version>0.8.0</Version>
     <Authors>Goncalo Oliveira</Authors>
     <Description>Channels Prometheus Metrics</Description>
     <RepositoryUrl>https://github.com/goncalo-oliveira/channels-prometheus</RepositoryUrl>
@@ -16,8 +16,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Faactory.Channels.Abstractions" Version="0.7.1" />
-    <PackageReference Include="prometheus-net" Version="8.0.0" />
+    <PackageReference Include="Faactory.Channels.Core" Version="0.8.0" />
+    <PackageReference Include="prometheus-net" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
