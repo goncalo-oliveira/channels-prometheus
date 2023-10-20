@@ -12,19 +12,11 @@ internal sealed class ChannelMetrics
     private readonly ( string Name, string Description ) MetricBytesSentTotal
         = ( "channels_bytes_sent_total", "Total number of bytes sent." );
 
-    public Gauge.Child ChannelsActiveTotal( IChannelInfo channel )
-    {
-        var gauge = Metrics.CreateGauge( 
+    public Gauge ChannelsActiveTotal( IChannelInfo channel )
+        => Metrics.CreateGauge( 
             MetricActiveTotal.Name,
-            MetricActiveTotal.Description,
-            new string[]
-            {
-                "channelId",
-            }
+            MetricActiveTotal.Description
         );
-
-        return gauge.WithLabels( channel.Id );
-    }
 
     public Counter ChannelsDataReceived( IChannelInfo channel )
         => Counter( MetricBytesReceivedTotal, channel );
