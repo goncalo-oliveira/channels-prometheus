@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "example", "example\example.csproj", "{114178AC-906E-4819-BD0D-6C24F37502DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "channels-prometheus", "src\channels-prometheus.csproj", "{84398A04-0A44-4DC0-AD58-B054B3F65DBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{114178AC-906E-4819-BD0D-6C24F37502DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114178AC-906E-4819-BD0D-6C24F37502DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114178AC-906E-4819-BD0D-6C24F37502DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114178AC-906E-4819-BD0D-6C24F37502DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84398A04-0A44-4DC0-AD58-B054B3F65DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84398A04-0A44-4DC0-AD58-B054B3F65DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84398A04-0A44-4DC0-AD58-B054B3F65DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84398A04-0A44-4DC0-AD58-B054B3F65DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA3B185E-7AD7-4513-8EDF-2E277612C8F9}
+	EndGlobalSection
+EndGlobal
