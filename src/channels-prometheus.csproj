@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
     <RootNamespace>channels_prometheus</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Faactory.Channels.Prometheus</PackageId>
-    <Version>0.8.3</Version>
+    <Version>0.9.0</Version>
     <Authors>Goncalo Oliveira</Authors>
     <Description>Channels Prometheus Metrics</Description>
     <RepositoryUrl>https://github.com/goncalo-oliveira/channels-prometheus</RepositoryUrl>
@@ -16,8 +16,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Faactory.Channels.Core" Version="0.8.3" />
-    <PackageReference Include="prometheus-net" Version="8.1.0" />
+    <PackageReference Include="Faactory.Channels.Core" Version="0.9.0" />
+    <PackageReference Include="prometheus-net" Version="8.2.1" />
   </ItemGroup>
 
   <ItemGroup>
