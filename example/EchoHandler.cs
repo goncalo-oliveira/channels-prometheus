@@ -1,6 +1,8 @@
 using Faactory.Channels;
 using Faactory.Channels.Handlers;
 
+namespace Faactory.Examples;
+
 public class EchoHandler : ChannelHandler<byte[]>
 {
     public override Task ExecuteAsync( IChannelContext context, byte[] data )

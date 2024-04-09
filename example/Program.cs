@@ -1,4 +1,5 @@
 ﻿using Faactory.Channels;
+using Faactory.Examples;
 using Prometheus;
 
 //var builder = WebApplication.CreateBuilder( args );
@@ -7,7 +8,7 @@ var builder = Host.CreateApplicationBuilder( args );
 /*
 Configure our server to listen on port 8080 and use the EchoHandler to handle incoming data.
 */
-builder.Services.AddChannelsHostedService( channel =>
+builder.Services.AddChannels( channel =>
 {
     channel.Configure( options =>
     {
@@ -21,11 +22,11 @@ builder.Services.AddChannelsHostedService( channel =>
 } );
 
 /*
-Configure stand-alone Kestrel server to listen on port 8081.
+Configure stand-alone Kestrel server to listen on port 9090 for Prometheus metrics.
 */
 builder.Services.AddMetricServer( options =>
 {
-    options.Port = 8081;
+    options.Port = 9090;
 } );
 
 var app = builder.Build();

@@ -11,7 +11,7 @@ public static class ChannelBuilderPrometheusExtensions
             throw new ArgumentNullException( nameof( builder ) );
         }
 
-        builder.Services.AddSingleton<IChannelEvents, PrometheusChannelEvents>();
+        builder.Services.AddSingleton<IChannelMonitor, PrometheusChannelMonitor>();
 
         return ( builder );
     }

@@ -24,7 +24,7 @@ internal sealed class ChannelMetrics
     public Counter ChannelsDataSent( IChannelInfo channel )
         => Counter( MetricBytesSentTotal, channel );
 
-    private Counter Counter( ( string Name, string Description ) metric, IChannelInfo channel )
+    private static Counter Counter( ( string Name, string Description ) metric, IChannelInfo channel )
     {
         var labels = new Dictionary<string, string>
         {

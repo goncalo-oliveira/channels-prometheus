@@ -1,8 +1,8 @@
 using Faactory.Channels;
 
-internal sealed class PrometheusChannelEvents : IChannelEvents
+internal sealed class PrometheusChannelMonitor : IChannelMonitor
 {
-    private readonly ChannelMetrics metrics = new ChannelMetrics();
+    private readonly ChannelMetrics metrics = new();
 
     public void ChannelClosed( IChannelInfo channelInfo )
     {
