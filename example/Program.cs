@@ -6,19 +6,25 @@ using Prometheus;
 var builder = Host.CreateApplicationBuilder( args );
 
 /*
-Configure our server to listen on port 8080 and use the EchoHandler to handle incoming data.
+Configure default channel pipeline
 */
 builder.Services.AddChannels( channel =>
 {
-    channel.Configure( options =>
-    {
-        options.Port = 8080;
-        options.Backlog = 5;
-    } );
-
     channel.AddInputHandler<EchoHandler>();
+} );
 
-    channel.UsePrometheusMetrics();
+/*
+Add metrics
+*/
+builder.Services.AddChannelMetrics();
+
+/*
+Configure our server to listen on port 8080
+*/
+builder.Services.AddTcpChannelListener( options =>
+{
+    options.Port = 8080;
+    options.Backlog = 5;
 } );
 
 /*

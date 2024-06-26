@@ -18,12 +18,12 @@ Install the package from NuGet
 dotnet add package Faactory.Channels.Prometheus
 ```
 
-To calculate the metrics, you just need to register the metrics middleware. This can be applied to either a service or a client channel builder.
+To calculate the metrics, you just need to register the metrics service. This will automatically calculate the metrics for all channels.
 
 ```csharp
-IChannelBuilder channel = ...;
+IServiceCollection services = ...;
 
-channel.UsePrometheusMetrics();
+services.AddChannelMetrics();
 ```
 
 To export the metrics, the easiest way is to install `prometheus-net.AspNetCore` package and register the pre-built middleware. If no other HTTP functionality is required, this is a good option.

@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Faactory.Channels.Prometheus</PackageId>
-    <Version>0.10.0</Version>
+    <Version>1.0.0-preview-1</Version>
     <Authors>Goncalo Oliveira</Authors>
     <Description>Channels Prometheus Metrics</Description>
     <RepositoryUrl>https://github.com/goncalo-oliveira/channels-prometheus</RepositoryUrl>
@@ -16,13 +16,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Faactory.Channels.Core" Version="0.10.0" />
+    <!-- <PackageReference Include="Faactory.Channels.Core" Version="0.10.0" /> -->
     <PackageReference Include="prometheus-net" Version="8.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
     <None Include="../faactory.png" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\channels\src\core\core.csproj" />
   </ItemGroup>
 
 </Project>
