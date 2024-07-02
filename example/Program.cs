@@ -1,12 +1,10 @@
-﻿using Faactory.Channels;
-using Faactory.Examples;
+﻿using Faactory.Examples;
 using Prometheus;
 
-//var builder = WebApplication.CreateBuilder( args );
 var builder = Host.CreateApplicationBuilder( args );
 
 /*
-Configure default channel pipeline
+Configure default channel
 */
 builder.Services.AddChannels( channel =>
 {
@@ -38,7 +36,7 @@ builder.Services.AddMetricServer( options =>
 var app = builder.Build();
 
 /*
-Suppress the default metrics that are registered by the .NET runtime.
+optional: Suppress the default metrics that are registered by the .NET runtime.
 */
 Metrics.SuppressDefaultMetrics();
 

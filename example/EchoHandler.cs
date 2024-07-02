@@ -13,7 +13,7 @@ public class EchoHandler : ChannelHandler<byte[]>
         Additional metric labels can be added by setting values in the Data
         using the "prometheus.label." prefix.
         */
-        context.Channel.Data["prometheus.label.test"] = "test";
+        context.Channel.Data.TryAdd( "prometheus.label.test", "test" );
 
         return Task.CompletedTask;
     }
