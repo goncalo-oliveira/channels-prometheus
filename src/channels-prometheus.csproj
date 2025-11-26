@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Faactory.Channels.Core" Version="1.0.1" />
+    <PackageReference Include="Faactory.Channels.Core" Version="1.1.0" />
     <PackageReference Include="prometheus-net" Version="8.2.1" />
   </ItemGroup>
 
