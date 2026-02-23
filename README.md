@@ -2,6 +2,11 @@
 
 Extends [Channels](https://github.com/goncalo-oliveira/channels) by providing Prometheus metrics.
 
+> [!IMPORTANT]
+>
+> As of Channels v2.0.0, metrics are provided natively via OpenTelemetry.
+> This project is now deprecated and will soon be archived.
+
 The exported metrics are:
 
 - `channels_active_total`: Total number of active channels.
